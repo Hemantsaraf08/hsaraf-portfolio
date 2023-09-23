@@ -2,10 +2,21 @@ import Layout from "@/src/components/Layout";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
 import Button from "@/src/ui/Button";
+import Lottie from "lottie-react";
+import Hero from "../public/animations/hero.json";
+import { useRef, useEffect } from "react";
 
 const Home: NextPageWithLayout = () => {
+  const heroLottieref: any = useRef(null);
+  useEffect(() => {
+    return () => {};
+  }, []);
+
   return (
-    <section id="home" className="bg-neutral-700 h-[calc(100vh-var(--header-ht-desktop))]">
+    <section
+      id="home"
+      className="bg-neutral-700 h-[calc(100vh-var(--header-ht-desktop))]"
+    >
       <div className="flex items-center justify-between container h-full">
         <div aria-label="Hemant, Frontend Developer, India">
           <h1 className="text-5xl text-white font-bold">Hi, I&apos;m Hemant</h1>
@@ -16,9 +27,30 @@ const Home: NextPageWithLayout = () => {
             I write code that brings life to products, <br />
             while ensuring performance and scalability.
           </p>
-          <Button variant="primary" size="large" text="Work Together" className="mt-5 "/>
+          <Button
+            variant="primary"
+            size="large"
+            text="Work Together"
+            className="mt-5 "
+          />
         </div>
-        <div></div>
+        <div
+          style={{ transform: "rotateY(-0.5turn)" }}
+          className="cursor-pointer"
+          onMouseEnter={() => {
+            if (heroLottieref.current) {
+              heroLottieref.current.stop();
+              heroLottieref.current.play();
+            }
+          }}
+        >
+          <Lottie
+            lottieRef={heroLottieref}
+            animationData={Hero}
+            loop={false}
+            aria-labelledby="Hemant Coding UI!"
+          />
+        </div>
       </div>
     </section>
   );
