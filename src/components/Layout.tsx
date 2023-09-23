@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
       <Navbar />
-      <main className="mt-[80px]">{loading ? <p>Loading ....</p> : <>{children}</>}</main>
+      <main>{loading ? <p>Loading ....</p> : <>{children}</>}</main>
     </div>
   );
 }

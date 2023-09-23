@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 function Navbar() {
   return (
-    <div className="bg-neutral-700 fixed top-0 left-0 right-0 ">
+    <div className="bg-neutral-700 fixed top-0 left-0 right-0 z-10">
       <nav className="container flex items-center justify-between h-20">
         <div className="flex items-center justify-between">
           <Link href="/">
