@@ -10,11 +10,12 @@ const ProjectsSection = dynamic(
 );
 
 const Home: NextPageWithLayout = () => {
+  console.log("changes");
   return (
     <>
       <HeroSection />
       <AboutSection />
-      <ProjectsSection/>
+      <ProjectsSection />
     </>
   );
 };
