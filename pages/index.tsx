@@ -9,6 +9,8 @@ const ProjectsSection = dynamic(
   () => import("@/src/components/ProjectsSection")
 );
 
+const ContactSection = dynamic(()=>import("@/src/components/ContactSection"))
+
 const Home: NextPageWithLayout = () => {
   console.log("changes");
   return (
@@ -16,6 +18,7 @@ const Home: NextPageWithLayout = () => {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
+      <ContactSection/>
     </>
   );
 };
