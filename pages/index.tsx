@@ -12,7 +12,6 @@ const ProjectsSection = dynamic(
 const ContactSection = dynamic(()=>import("@/src/components/ContactSection"))
 
 const Home: NextPageWithLayout = () => {
-  console.log("changes");
   return (
     <>
       <HeroSection />

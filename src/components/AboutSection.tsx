@@ -9,7 +9,7 @@ import SectionContainer from "../ui/SectionContainer";
 function AboutSection() {
   const abtLottieref: any = useRef(null);
   return (
-    <SectionContainer id="about" bgColor="bg-neutral-800">
+    <SectionContainer id="about" bgColor="bg-neutral-700">
       <div className="max-w-[50%]">
         <Lottie
           lottieRef={abtLottieref}
