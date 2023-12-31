@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import HeroSection from "@/src/components/HeroSection";
 
 const AboutSection = dynamic(() => import("@/src/components/AboutSection"));
-const ProjectsSection = dynamic(
-  () => import("@/src/components/ProjectsSection")
+const ExperienceSection = dynamic(
+  () => import("@/src/components/ExperienceSection")
 );
 
 const ContactSection = dynamic(()=>import("@/src/components/ContactSection"))
@@ -16,7 +16,7 @@ const Home: NextPageWithLayout = () => {
     <>
       <HeroSection />
       <AboutSection />
-      <ProjectsSection />
+      <ExperienceSection />
       <ContactSection/>
     </>
   );

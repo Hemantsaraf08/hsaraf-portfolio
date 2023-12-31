@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 function ContactSection() {
   return (
-    <SectionContainer id="say-hello" bgColor="bg-neutral-700">
+    <SectionContainer id="say-hello" bgColor="bg-neutral-800">
       <div className="max-w-[50%] mr-12">
         <h3 className="text-white text-[52px] font-bold leading-[72px]">
           Say hello and 

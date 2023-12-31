@@ -13,7 +13,7 @@ function SectionContainer({
   className?: string
 }) {
   return (
-    <section id={id? id : undefined} className={bgColor ? bgColor : "bg-neutral-700"}>
+    <section id={id? id : undefined} className={bgColor ? bgColor : "bg-neutral-800"}>
       <div className={`${cn('flex items-center justify-between container min-h-screen py-[var(--header-ht-desktop)]', className)}`}>
         {children}
       </div>

@@ -8,7 +8,7 @@ import SectionContainer from "../ui/SectionContainer";
 function HeroSection() {
   const heroLottieref: any = useRef(null);
   return (
-    <SectionContainer id="home" bgColor="bg-neutral-700">
+    <SectionContainer id="home" bgColor="bg-neutral-800">
       <div aria-label="Hemant, Frontend Developer, India">
         <h1 className="text-5xl text-white font-bold">Hi, I&apos;m Hemant</h1>
         <h3 className="text-success-500 font-bold text-2xl ">

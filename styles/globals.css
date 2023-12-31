@@ -56,28 +56,32 @@ body {
   overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* For Webkit-based browsers (Chrome, Safari) */
-/* ::-webkit-scrollbar {
-  width: 8px; /* Adjust the width as desired */
-/* } */
+/* Style the thin scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #262626; /* Set the background color of the track */
+}
+
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color as desired */
-  border-radius: 4px; /* Adjust the border radius as desired */
-} */
+  background-color: #555; /* Set the color of the scroll thumb */
+  border-radius: 4px; /* Set the border radius for a rounded appearance */
+}
 
-
-/* For Firefox */
-/* Note: Firefox does not support customizing the scrollbar width */
-/* The following styles will only affect the thumb */
-/* You may also need to use `!important` to override default Firefox styles */
-/* For example: `background-color: rgba(0, 0, 0, 0.3) !important;` */
-* {
-  scrollbar-width: thin;
-  /* scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0); */
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888; /* Set a different color on hover */
 }

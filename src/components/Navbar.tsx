@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 function Navbar() {
   return (
-    <div className="bg-neutral-700 fixed top-0 left-0 right-0 z-10">
+    <div className="bg-neutral-800 fixed top-0 left-0 right-0 z-10">
       <nav className="container flex items-center justify-between h-20">
         <div className="flex items-center justify-between">
           <Link href="/">
@@ -16,7 +16,8 @@ function Navbar() {
         <div className="flex items-center gap-8">
           <NavLinks url="/#home" text="Home" />
           <NavLinks url="/#about" text="About Me" />
-          <NavLinks url="/#work" text="Work" />
+          <NavLinks url="/#work" text="Experience" />
+          <NavLinks url="/#projects" text="Projects" />
           <NavLinks url="/blog" text="Blogs" />
           <Link href="/#say-hello">
             <Button variant="primary" size="small" text="Say Hello"/>

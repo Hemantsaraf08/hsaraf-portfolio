@@ -5,7 +5,7 @@ import SectionContainer from "@/src/ui/SectionContainer";
 
 function BlogList() {
   return (
-    <SectionContainer bgColor="bg-neutral-700" className="items-start justify-center">
+    <SectionContainer bgColor="bg-neutral-800" className="items-start justify-center">
       <div>index</div>
       <div>index</div>
     </SectionContainer>
