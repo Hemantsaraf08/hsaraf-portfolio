@@ -9,7 +9,8 @@ const ExperienceSection = dynamic(
   () => import("@/src/components/ExperienceSection")
 );
 
-const ContactSection = dynamic(()=>import("@/src/components/ContactSection"))
+const ContactSection = dynamic(()=>import("@/src/components/ContactSection"));
+const ProjectsSection = dynamic(()=>import("@/src/components/ProjectsSection"));
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPageWithLayout = () => {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
+      <ProjectsSection/>
       <ContactSection/>
     </>
   );

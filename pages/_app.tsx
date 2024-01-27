@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <title>Hemant Saraf - Frontend Web Developer, India | Portfolio</title>
         <meta
           name="description"
-          content="Experienced Frontend Developer, specializing in React & JS. Explore my portfolio to learn more about my work and connect with me. 🚀 - Hemant Saraf."
+          content="Experienced Frontend Developer, specializing in React & JS. Explore my portfolio to know more about my work and connect with me. 🚀 - Hemant Saraf."
         />
       </Head>
 

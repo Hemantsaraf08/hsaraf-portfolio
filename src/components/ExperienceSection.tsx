@@ -26,7 +26,7 @@ function ExperienceSection() {
         <div className="py-4 flex flex-col gap-8 pr-2">
           <div
             className="flex flex-col gap-4"
-            aria-describedby="Senior Software Engineer Experience"
+            aria-label="Senior Software Engineer Experience"
           >
             <Typography
               variant="paragraph-small"
@@ -74,7 +74,7 @@ function ExperienceSection() {
           </div>
           <div
             className="flex flex-col gap-4"
-            aria-describedby="Software Engineer Experience"
+            aria-label="Software Engineer Experience"
           >
             <Typography
               variant="paragraph-small"
