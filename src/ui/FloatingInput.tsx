@@ -69,10 +69,10 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
           } ${
             LeftIcon ? "pl-[30px]" : "pl-4"
           } pb-3 pt-3.5 w-full text-sm font-medium ${
-            textColor ? textColor : "text-NEUTRAL-800"
-          } bg-transparent rounded-lg disabled:border-NEUTRAL-400 ${
-            hasError ? "border-DESTRUCTIVE-600" : "border-NEUTRAL-400"
-          } appearance-none focus:outline-none focus:ring-0 focus:shadow peer disabled:text-NEUTRAL-500`}
+            textColor ? textColor : "text-neutral-200"
+          } bg-transparent rounded-lg disabled:border-neutral-400 ${
+            hasError ? "border-red-600" : "border-neutral-200"
+          } appearance-none focus:outline-none focus:ring-0 focus:shadow peer disabled:text-neutral-300`}
           placeholder={" "}
           disabled={disabled}
           {...otherProps}
@@ -80,10 +80,10 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
         <label
           htmlFor={id}
           className={`absolute text-sm ${borderTransparent && "pl-3"} ${
-            hasError ? "text-DESTRUCTIVE-600" : "text-NEUTRAL-500"
-          } peer-disabled:text-NEUTRAL-400 duration-300 transform -translate-y-4 scale-75 top-1.5  origin-[0] ${
-            LeftIcon && !value ? "bg-transparent" : "bg-white"
-          } px-2 peer-focus:bg-white peer-focus:px-1.5 peer-focus:text-NEUTRAL-800 peer-focus:font-medium peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:scale-75 peer-focus:-translate-y-4 ${
+            hasError ? "text-red-600" : "text-neutral-200"
+          } peer-disabled:text-neutral-300 duration-300 transform -translate-y-4 scale-75 top-1.5  origin-[0] ${
+            LeftIcon && !value ? "bg-transparent" : "bg-neutral-800"
+          } px-2 peer-focus:bg-neutral-800 peer-focus:px-1.5 peer-focus:text-white peer-focus:font-medium peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:scale-75 peer-focus:-translate-y-4 ${
             LeftIcon && !value ? "left-6" : "left-2"
           }`}
         >
@@ -114,7 +114,7 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
         {RightIcon && (
           <div
             onClick={handleRightIconClick}
-            className={`absolute right-3 top-3.5 peer-disabled:text-NEUTRAL-400 ${
+            className={`absolute right-3 top-3.5 peer-disabled:text-neutral-400 ${
               onRghtIconClick ? "cursor-pointer" : ""
             }`}
           >
@@ -125,14 +125,14 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
       {helperText && !hasError && (
         <p
           className={`mt-2 text-sm ${
-            value ? "text-NEUTRAL-800" : "text-NEUTRAL-400"
+            value ? "text-white" : "text-neutral-200"
           }`}
         >
           {helperText}
         </p>
       )}
       {errorMessage && hasError && (
-        <p className="mt-2 text-sm text-DESTRUCTIVE-600">{errorMessage}</p>
+        <p className="mt-2 text-sm text-red-600">{errorMessage}</p>
       )}
     </div>
   );

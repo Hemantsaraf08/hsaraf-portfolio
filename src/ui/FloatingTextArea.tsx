@@ -73,20 +73,20 @@ const FloatingTextArea: React.FC<FloatingInputProps> = ({
             disable ? "caret-transparent" : ""
           } ${
             LeftIcon ? "pl-[30px]" : "pl-4"
-          } pb-2.5 pt-4 w-full text-sm font-medium text-NEUTRAL-800 bg-transparent rounded-lg border disabled:border-NEUTRAL-400 ${
-            hasError ? "border-DESTRUCTIVE-600" : "border-NEUTRAL-400"
+          } pb-2.5 pt-4 w-full text-sm font-medium text-neutral-200 bg-transparent rounded-lg border disabled:border-neutral-400 ${
+            hasError ? "border-red-600" : "border-neutral-200"
           } appearance-none focus:outline-none focus:ring-0 focus:shadow peer`}
           placeholder={" "}
           {...otherProps}
           disabled={disable}
-          style={{ color: disable ? "#B8B8B8" : "#000000" }}
+          // style={{ color: disable ? "#B8B8B8" : "#000000" }}
         />
         <label
           className={`absolute text-sm ${
-            hasError ? "text-DESTRUCTIVE-600" : "text-NEUTRAL-500"
-          } peer-disabled:text-NEUTRAL-400 duration-300 transform -translate-y-4 scale-75 top-2  origin-[0] ${
-            LeftIcon && !value ? "bg-transparent" : "bg-white"
-          } px-2 peer-focus:bg-white peer-focus:px-1.5 peer-focus:text-NEUTRAL-800 peer-focus:font-medium peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 ${
+            hasError ? "text-red-600" : "text-neutral-200"
+          } peer-disabled:text-neutral-400 duration-300 transform -translate-y-4 scale-75 top-2  origin-[0] ${
+            LeftIcon && !value ? "bg-transparent" : "bg-neutral-800"
+          } px-2 peer-focus:bg-neutral-800 peer-focus:px-1.5 peer-focus:text-white peer-focus:font-medium peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 ${
             LeftIcon && !value ? "left-6" : "left-2"
           }`}
         >
@@ -115,7 +115,7 @@ const FloatingTextArea: React.FC<FloatingInputProps> = ({
           </svg>
         )}
         {RightIcon && (
-          <div className="absolute right-3 top-3 peer-disabled:text-NEUTRAL-400">
+          <div className="absolute right-3 top-3 peer-disabled:text-neutral-400">
             {RightIcon}
           </div>
         )}
@@ -123,14 +123,14 @@ const FloatingTextArea: React.FC<FloatingInputProps> = ({
       {helperText && !hasError && (
         <p
           className={`mt-2 text-sm ${
-            value ? "text-NEUTRAL-800" : "text-NEUTRAL-400"
+            value ? "text-white" : "text-neutral-200"
           }`}
         >
           {helperText}
         </p>
       )}
       {errorMessage && hasError && (
-        <p className="mt-2 text-sm text-DESTRUCTIVE-600">{errorMessage}</p>
+        <p className="mt-2 text-sm text-red-600">{errorMessage}</p>
       )}
     </div>
   );
