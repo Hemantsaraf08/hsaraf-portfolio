@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { ChangeEvent } from "react";
 
 interface FloatingInputProps {
   rows: number;
@@ -14,7 +14,7 @@ interface FloatingInputProps {
   errorMessage?: string;
   value?: string;
   textLimit?: number;
-  onChange: (value: string) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onClearText?: () => void;
   [key: string]: any;
   disable?: boolean;
@@ -39,7 +39,7 @@ const FloatingTextArea: React.FC<FloatingInputProps> = ({
   ...otherProps
 }) => {
   const handleChange = (e: any) => {
-    onChange(e.target.value);
+    onChange(e);
   };
 
   const handleClearText = () => {
