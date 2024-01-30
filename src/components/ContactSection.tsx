@@ -17,9 +17,9 @@ function ContactSection() {
     if(!process.env.NEXT_PUBLIC_FORM_SUBMIT_URL) return;
     setIsFormSubmitting(true);
     let formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
+    formData.append("name", name.trim());
+    formData.append("email", email.trim());
+    formData.append("message", message.trim());
     fetch(process.env.NEXT_PUBLIC_FORM_SUBMIT_URL, {
       method: "POST",
       body: formData,

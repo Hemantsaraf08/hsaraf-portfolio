@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import Hero from "../../public/animations/hero.json";
 import { useRef } from "react";
 import SectionContainer from "../ui/SectionContainer";
+import Link from "next/link"
 
 function HeroSection() {
   const heroLottieref: any = useRef(null);
@@ -18,12 +19,14 @@ function HeroSection() {
           I write code that brings life to products, <br />
           while ensuring performance and scalability.
         </p>
-        <Button
-          variant="primary"
-          size="large"
-          text="Work Together"
-          className="mt-5 "
-        />
+        <Link href="/#say-hello">
+          <Button
+            variant="primary"
+            size="large"
+            text="Work Together"
+            className="mt-5 "
+          />
+        </Link>
       </div>
       <div
         style={{ transform: "rotateY(-0.5turn)" }}
