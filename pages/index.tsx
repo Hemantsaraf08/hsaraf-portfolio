@@ -9,6 +9,8 @@ const ExperienceSection = dynamic(
   () => import("@/src/components/ExperienceSection")
 );
 
+//trial commit
+
 const ContactSection = dynamic(()=>import("@/src/components/ContactSection"));
 const ProjectsSection = dynamic(()=>import("@/src/components/ProjectsSection"));
 
